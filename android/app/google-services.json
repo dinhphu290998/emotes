@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "579386865602",
+    "project_id": "emotes-be1df",
+    "storage_bucket": "emotes-be1df.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:579386865602:android:424245d22b2b7f94fc085b",
+        "android_client_info": {
+          "package_name": "com.ndp.emotes"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAcxBSovoZ440px-hT_lRbXEX0RVyCr7w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

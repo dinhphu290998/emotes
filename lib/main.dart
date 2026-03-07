@@ -1,0 +1,71 @@
+import 'package:emotes/splash/splash_page.dart';
+import 'package:emotes/splash/start_page.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:get/get.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'helpers/ad_helper.dart';
+import 'helpers/config.dart';
+import 'helpers/pref.dart';
+
+//global object for accessing device screen size
+late Size mq;
+
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  // Enter full-screen (ẩn system bar)
+  SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
+
+  //firebase initialization
+  await Firebase.initializeApp();
+
+  //initializing remote config
+  await Config.initConfig();
+
+  await Pref.initializeHive();
+
+  await AdHelper.initAds();
+
+  //for setting orientation to portrait only
+  await SystemChrome.setPreferredOrientations(
+      [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]).then((v) {
+    runApp(const MyApp());
+  });
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
+
+    return GetMaterialApp(
+      title: 'Free VPN',
+      home: StartPage(),
+
+      //theme
+      theme: ThemeData(
+        appBarTheme: AppBarTheme(centerTitle: true, elevation: 3),
+        useMaterial3: false,
+      ),
+
+      themeMode: Pref.isDarkMode ? ThemeMode.dark : ThemeMode.light,
+
+      //dark theme
+      darkTheme: ThemeData(
+          brightness: Brightness.dark,
+          useMaterial3: false,
+          appBarTheme: AppBarTheme(centerTitle: true, elevation: 3)),
+
+      debugShowCheckedModeBanner: false,
+    );
+  }
+}
+
+extension AppTheme on ThemeData {
+  Color get lightText => Pref.isDarkMode ? Colors.white70 : Colors.black54;
+  Color get bottomNav => Pref.isDarkMode ? Colors.white12 : Colors.blue;
+}
