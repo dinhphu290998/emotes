@@ -58,7 +58,7 @@ class _GunsPageState extends State<GunsPage> {
                 final gun = guns[index];
                 return GestureDetector(
                   onTap: () {
-                    AdHelper.showInterstitialSelectAd(onComplete: () async {
+                    AdHelper.showRewardedAd(onComplete: () async {
                       /// Khi chạy xong progress thì chuyển trang
                       Navigator.push(
                         context,

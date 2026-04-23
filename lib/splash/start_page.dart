@@ -12,6 +12,7 @@ import '../../splash/onboarding.dart';
 import '../helpers/ad_helper.dart';
 import '../language/language_page.dart';
 import '../share/utils/local_storage.dart';
+import 'package:facebook_app_events/facebook_app_events.dart';
 
 class StartPage extends StatefulWidget {
   @override
@@ -46,6 +47,8 @@ class _StartPageState extends State<StartPage> {
     );
   }
 
+  final fb = FacebookAppEvents();
+
   late Timer _timer;
   void startTimer() {
     const oneSec = const Duration(milliseconds: 2000);
@@ -70,6 +73,8 @@ class _StartPageState extends State<StartPage> {
     if (!kIsWeb) await MobileAds.instance.initialize();
     await LocalStorageService.init();
 
+    fb.logEvent(name: "fb_mobile_activate_app");
+    
     AdHelper.precacheInterstitialAd();
     AdHelper.precacheInterstitialStartAd();
     AdHelper.precacheInterstitialGetStartAd();

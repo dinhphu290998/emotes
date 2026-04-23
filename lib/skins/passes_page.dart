@@ -88,7 +88,7 @@ class _PassesPageState extends State<PassesPage> {
                                     ),
                                     child: AnimatedTapWrapper(
                                       onTap: () {
-                                        AdHelper.showInterstitialSelectAd(onComplete: () async {
+                                        AdHelper.showRewardedAd(onComplete: () async {
                                           /// Khi chạy xong progress thì chuyển trang
                                           Navigator.push(
                                             context,
@@ -126,7 +126,7 @@ class _PassesPageState extends State<PassesPage> {
                                     ),
                                     child: AnimatedTapWrapper(
                                       onTap: () {
-                                        AdHelper.showInterstitialSelectAd(onComplete: () async {
+                                        AdHelper.showRewardedAd(onComplete: () async {
                                           /// Khi chạy xong progress thì chuyển trang
                                           Navigator.push(
                                             context,

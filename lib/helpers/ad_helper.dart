@@ -145,7 +145,7 @@ class AdHelper {
         },
         onAdFailedToLoad: (err) {
           Get.back();
-          log('Failed to load an interstitial ad: ${err.message}');
+          log('Failed to load an showInterstitialAd ad: ${err.message}');
           onComplete();
         },
       ),
@@ -175,7 +175,7 @@ class AdHelper {
         },
         onAdFailedToLoad: (err) {
           _resetInterstitialStartAd();
-          log('Failed to load an interstitial start ad: ${err.message}');
+          log('Failed to load an precacheInterstitialStartAd start ad: ${err.message}');
         },
       ),
     );
@@ -220,7 +220,7 @@ class AdHelper {
         },
         onAdFailedToLoad: (err) {
           Get.back();
-          log('Failed to load an interstitial ad: ${err.message}');
+          log('Failed to load an showInterstitialStartAd ad: ${err.message}');
           onComplete();
         },
       ),
@@ -250,7 +250,7 @@ class AdHelper {
         },
         onAdFailedToLoad: (err) {
           _resetInterstitialGetStartAd();
-          log('Failed to load an interstitial get start ad: ${err.message}');
+          log('Failed to load an precacheInterstitialGetStartAd get start ad: ${err.message}');
         },
       ),
     );
@@ -295,7 +295,7 @@ class AdHelper {
         },
         onAdFailedToLoad: (err) {
           Get.back();
-          log('Failed to load an interstitial ad: ${err.message}');
+          log('Failed to load an showInterstitialGetStartAd ad: ${err.message}');
           onComplete();
         },
       ),
@@ -325,7 +325,7 @@ class AdHelper {
         },
         onAdFailedToLoad: (err) {
           _resetInterstitialSelectAd();
-          log('Failed to load an interstitial select ad: ${err.message}');
+          log('Failed to load an precacheInterstitialSelectAd select ad: ${err.message}');
         },
       ),
     );
@@ -370,7 +370,7 @@ class AdHelper {
         },
         onAdFailedToLoad: (err) {
           Get.back();
-          log('Failed to load an interstitial ad: ${err.message}');
+          log('Failed to load an showInterstitialSelectAd ad: ${err.message}');
           onComplete();
         },
       ),

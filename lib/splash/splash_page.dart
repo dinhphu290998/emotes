@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:facebook_app_events/facebook_app_events.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
@@ -121,6 +122,7 @@ class _SplashPageState extends State<SplashPage> {
       ),
     );
   }
+  final fb = FacebookAppEvents();
 
   late Timer _timer;
   void startTimer() {
@@ -129,6 +131,7 @@ class _SplashPageState extends State<SplashPage> {
     _timer = new Timer.periodic(oneSec, (Timer timer) async {
       //code to show interstitial ad and then connect to vpn
       AdHelper.showInterstitialStartAd(onComplete: () async {
+        fb.logEvent(name: "interstitial_ad");
         /// Khi chạy xong progress thì chuyển trang
         Navigator.push(
           context,

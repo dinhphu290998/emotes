@@ -114,7 +114,7 @@ class _HomePageState extends State<HomePage> {
                                     ),
                                     child: AnimatedTapWrapper(
                                       onTap: () {
-                                        AdHelper.showInterstitialSelectAd(onComplete: () async {
+                                        AdHelper.showRewardedAd(onComplete: () async {
                                           /// Khi chạy xong progress thì chuyển trang
                                           Navigator.push(
                                             context,
@@ -157,7 +157,7 @@ class _HomePageState extends State<HomePage> {
                                     ),
                                     child: AnimatedTapWrapper(
                                       onTap: () {
-                                        AdHelper.showInterstitialSelectAd(onComplete: () async {
+                                        AdHelper.showRewardedAd(onComplete: () async {
                                           /// Khi chạy xong progress thì chuyển trang
                                           Navigator.push(
                                             context,
@@ -203,7 +203,7 @@ class _HomePageState extends State<HomePage> {
                                     ),
                                     child: AnimatedTapWrapper(
                                       onTap: () {
-                                        AdHelper.showInterstitialSelectAd(onComplete: () async {
+                                        AdHelper.showRewardedAd(onComplete: () async {
                                           /// Khi chạy xong progress thì chuyển trang
                                           Navigator.push(
                                             context,
@@ -246,7 +246,7 @@ class _HomePageState extends State<HomePage> {
                                     ),
                                     child: AnimatedTapWrapper(
                                       onTap: () {
-                                        AdHelper.showInterstitialSelectAd(onComplete: () async {
+                                        AdHelper.showRewardedAd(onComplete: () async {
                                           /// Khi chạy xong progress thì chuyển trang
                                           Navigator.push(
                                             context,
@@ -290,7 +290,7 @@ class _HomePageState extends State<HomePage> {
                                     ),
                                     child: AnimatedTapWrapper(
                                       onTap: () {
-                                        AdHelper.showInterstitialSelectAd(onComplete: () async {
+                                        AdHelper.showRewardedAd(onComplete: () async {
                                           /// Khi chạy xong progress thì chuyển trang
                                           Navigator.push(
                                             context,
@@ -462,7 +462,7 @@ class _CustomRatingDialogState extends State<CustomRatingDialog> {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Text(
-                    "HOW'S YOUR EXPERIENCE?\nPLEASE RATE US",
+                    "GIVE US A 5-STAR RATING TO RECEIVE A GIFT",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: Colors.white,
@@ -502,24 +502,6 @@ class _CustomRatingDialogState extends State<CustomRatingDialog> {
                     ),
                   ),
                   const SizedBox(height: 20),
-                  OutlinedButton(
-                    style: OutlinedButton.styleFrom(
-                      foregroundColor: Colors.greenAccent,
-                      side: BorderSide(color: Colors.greenAccent.shade400),
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 60, vertical: 12),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                    ),
-                    onPressed: () {
-                      Navigator.pop(context);
-                    },
-                    child: const Text(
-                      "LATER",
-                      style: TextStyle(fontSize: 16),
-                    ),
-                  ),
                 ],
               ),
             ),

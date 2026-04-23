@@ -199,7 +199,7 @@ class _PetWheelPageState extends State<PetWheelPage> {
               ),
             ),
             _adSelectController.ad != null && _adSelectController.adLoaded.isTrue ? SizedBox(
-                height: 300, child: AdWidget(ad: _adSelectController.ad!)) : Container(height: 24,)
+                height: 350, child: AdWidget(ad: _adSelectController.ad!)) : Container(height: 24,)
           ],
         ),
       ),

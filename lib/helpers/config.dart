@@ -6,34 +6,34 @@ class Config {
   static final _config = FirebaseRemoteConfig.instance;
 
   static const _defaultValues = {
-    "interstitial_ad": "ca-app-pub-2517476362171621/9543253375", //
-    "interstitial_start_ad": "ca-app-pub-2517476362171621/9543253375", //
-    "interstitial_get_start_ad": "ca-app-pub-2517476362171621/9543253375", //
-    "interstitial_select": "ca-app-pub-2517476362171621/9543253375", //
+    "interstitial_ad": "ca-app-pub-9021132987511379/1392838253", //
+    "interstitial_start_ad": "ca-app-pub-9021132987511379/5591388971", //
+    "interstitial_get_start_ad": "ca-app-pub-9021132987511379/7718858866", //
+    "interstitial_select": "ca-app-pub-9021132987511379/9079756587", //
 
-    "native_ad": "ca-app-pub-1965570099044440/6458596822", //
-    "native_language_ad": "ca-app-pub-1965570099044440/5380338938", //
-    "native_info_ad": "ca-app-pub-1965570099044440/6769442225", //
-    "native_page_1": "ca-app-pub-1965570099044440/5177304746", //
-    "native_page_2": "ca-app-pub-1965570099044440/8653369539", //
-    "native_page_3": "ca-app-pub-1965570099044440/2443184402", //
-    "native_select": "ca-app-pub-1965570099044440/9395605568", //
+    "native_ad": "ca-app-pub-9021132987511379/4749080593", //
+    "native_language_ad": "ca-app-pub-9021132987511379/9031940538", //
+    "native_info_ad": "ca-app-pub-9021132987511379/4019001599", //
+    "native_page_1": "ca-app-pub-9021132987511379/9530633983", //
+    "native_page_2": "ca-app-pub-9021132987511379/2705919928", //
+    "native_page_3": "ca-app-pub-9021132987511379/8217552313", //
+    "native_select": "ca-app-pub-9021132987511379/8964206511", //
 
-    "native_gun": "ca-app-pub-1965570099044440/6027206197",
-    "native_character": "ca-app-pub-1965570099044440/6382429416",
-    "native_pet": "ca-app-pub-1965570099044440/6769442225",
-    "native_emotes": "ca-app-pub-1965570099044440/9084760169",
+    "native_gun": "ca-app-pub-9021132987511379/4569076607",
+    "native_character": "ca-app-pub-9021132987511379/3255994935",
+    "native_pet": "ca-app-pub-9021132987511379/3419646466",
+    "native_emotes": "ca-app-pub-9021132987511379/1596989403",
 
-    "native_lucky_gun": "ca-app-pub-1965570099044440/1708687234",
-    "native_lucky_character": "ca-app-pub-1965570099044440/7680508720",
+    "native_lucky_gun": "ca-app-pub-9021132987511379/9250557644",
+    "native_lucky_character": "ca-app-pub-9021132987511379/4400737400",
 
-    "rewarded_ad": "ca-app-pub-1965570099044440/9380603201", //
+    "rewarded_ad": "ca-app-pub-9021132987511379/6904470642", //
 
-    "banner_ad": "ca-app-pub-1965570099044440/2212559623", //
-    "banner_home_ad": "ca-app-pub-1965570099044440/4877776054", //
-    "banner_detail_ad": "ca-app-pub-1965570099044440/7695511082",
-    "banner_lucky_pet_ad": "ca-app-pub-1965570099044440/8893188476",
-    "banner_lucky_diamond_ad": "ca-app-pub-1965570099044440/2919136630",
+    "banner_ad": "ca-app-pub-9021132987511379/7958246608", //
+    "banner_home_ad": "cca-app-pub-9021132987511379/6645164934", //
+    "banner_detail_ad": "ca-app-pub-9021132987511379/3068292672",
+    "banner_lucky_pet_ad": "ca-app-pub-9021132987511379/5153091038",
+    "banner_lucky_diamond_ad": "ca-app-pub-9021132987511379/5153091038",
 
     "show_ads": true,
     "show_ads_before": true

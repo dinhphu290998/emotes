@@ -4,7 +4,7 @@ description: Flutter Android App.
 publish_to: 'none'
 
 # App Version
-version: 1.2.6+7
+version: 1.2.12+12
 
 environment:
   sdk: ^3.6.1
@@ -64,6 +64,8 @@ dependencies:
   percent_indicator: ^4.2.5
 
   gallery_saver_plus: ^3.2.9
+
+  facebook_app_events: ^0.27.1
 
 dev_dependencies:
   flutter_test:

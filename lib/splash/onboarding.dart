@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:facebook_app_events/facebook_app_events.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
@@ -20,6 +21,8 @@ class OnboardingPage extends StatefulWidget {
 class _OnboardingPageState extends State<OnboardingPage> {
 
   final BannerAdController _bannerController = BannerAdController();
+
+  final fb = FacebookAppEvents();
 
   @override
   Widget build(BuildContext context) {
@@ -147,20 +150,14 @@ class _OnboardingPageState extends State<OnboardingPage> {
                               horizontal: 12),
                           child: GestureDetector(
                               onTap: () {
-                                // EasyLoading.show();
-                                // AdManager.instance.loadInterstitialAdStart(
-                                //   onAdDismissed: () {
-                                //     EasyLoading.dismiss();
-                                //     Navigator.push(
-                                //       context,
-                                //       MaterialPageRoute(builder: (context) => GuidePage()),
-                                //     );
-                                //   },
-                                // );
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(builder: (context) => GuidePage()),
-                                );
+                                AdHelper.showInterstitialGetStartAd(onComplete: () async {
+                                  fb.logEvent(name: "interstitial_ad");
+                                  /// Khi chạy xong progress thì chuyển trang
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(builder: (context) => GuidePage()),
+                                  );
+                                });
                               },
                               child: Center(
                                 child: Container(

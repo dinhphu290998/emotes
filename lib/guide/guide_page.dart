@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'dart:io';
+import 'package:facebook_app_events/facebook_app_events.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -166,7 +167,7 @@ class _GuidePageState extends State<GuidePage> {
                                     ),
                                     SizedBox(height: 12,),
                                     _ad1Controller.ad != null && _ad1Controller.adLoaded.isTrue ? SizedBox(
-                                        height: 300, child: AdWidget(ad: _ad1Controller.ad!)) : Container()
+                                        height: 350, child: AdWidget(ad: _ad1Controller.ad!)) : Container()
                                   ],
                                 ),
                               ),
@@ -285,7 +286,7 @@ class _GuidePageState extends State<GuidePage> {
                                     ),
                                     SizedBox(height: 12,),
                                     _ad2Controller.ad != null && _ad2Controller.adLoaded.isTrue ? SizedBox(
-                                        height: 300, child: AdWidget(ad: _ad2Controller.ad!)) : Container()
+                                        height: 350, child: AdWidget(ad: _ad2Controller.ad!)) : Container()
                                   ],
                                 ),
                               ),
@@ -361,6 +362,7 @@ class _GuidePageState extends State<GuidePage> {
                                       child: GestureDetector(
                                           onTap: () {
                                             AdHelper.showInterstitialGetStartAd(onComplete: () async {
+                                              fb.logEvent(name: "interstitial_ad");
                                               /// Khi chạy xong progress thì chuyển trang
                                               Navigator.push(
                                                 context,
@@ -407,7 +409,7 @@ class _GuidePageState extends State<GuidePage> {
                                     ),
                                     SizedBox(height: 12,),
                                     _ad3Controller.ad != null && _ad3Controller.adLoaded.isTrue ? SizedBox(
-                                        height: 300, child: AdWidget(ad: _ad3Controller.ad!)) : Container()
+                                        height: 350, child: AdWidget(ad: _ad3Controller.ad!)) : Container()
                                   ],
                                 ),
                               ),
@@ -512,6 +514,8 @@ class _GuidePageState extends State<GuidePage> {
       ),
     );
   }
+
+  final fb = FacebookAppEvents();
 
   @override
   void initState() {

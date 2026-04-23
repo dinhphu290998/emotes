@@ -58,7 +58,7 @@ class _PetsPageState extends State<PetsPage> {
                 final pet = pets[index];
                 return GestureDetector(
                   onTap: () {
-                    AdHelper.showInterstitialSelectAd(onComplete: () async {
+                    AdHelper.showRewardedAd(onComplete: () async {
                       /// Khi chạy xong progress thì chuyển trang
                       Navigator.push(
                         context,
